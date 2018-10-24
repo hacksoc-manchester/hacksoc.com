@@ -29,6 +29,8 @@ const MainRouter = (database, passport) => {
   router.get('/sponsors', mainController.sponsors);
   // The list of all events
   router.get('/events', mainController.getEvents);
+  // Coding classes page
+  router.get('/coding-classes', mainController.codingClasses);
 
 
   const cvRouter = require("./CVRouter")(database, passport);
