@@ -15,37 +15,7 @@
       <div id="body">
         <section id="contact">
           <h1>Contact</h1>
-          <div class="contact-form">
-            <form method="post" action="contact">
-              <% if (locals.error) { %>
-                <div class="alert alert-danger">
-                  <%= error %>
-                </div>
-                <% } %>
-                  <div class="user-details row">
-                    <div class="user-name col-md-6">
-                      <input type="text" name="name" placeholder="Your Name (Optional)">
-                    </div>
-                    <div class="user-email col-md-6">
-                      <input type="text" name="email" placeholder="Your Email (Optional)">
-                    </div>
-                  </div>
-                  <div class="message row">
-                    <textarea style="width: 100%" name="message" placeholder="Message"></textarea>
-                  </div>
-                  <div class="actions">
-                    <div class="g-recaptcha" data-sitekey="<%= recaptchaKey %>"></div>
-                    <ul>
-                      <li>
-                        <input class="submit-button" type="submit" value="Send Message">
-                      </li>
-                      <li>
-                        <input class="reset-button" type="reset" value="Clear Form">
-                      </li>
-                    </ul>
-                  </div>
-            </form>
-          </div>
+          <% include ../partials/contactForm.ejs %>
         </section>
       </div>
       <% include ../partials/footer.ejs %>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head.ejs %>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <title>Coding classes | HackSoc</title>
+    <!--<link rel="stylesheet" type="text/css" href="/css/sign-up.css" />-->
+    <link rel="stylesheet" type="text/css" href="/css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="/css/coding-classes.css" />
+</head>
+
+<body>
+  <div id="container">
+    <% include ../partials/navbar.ejs %>
+    <% include ../partials/header.ejs %>
+    <div id="body">
+      <section id="codingClasses">
+        <div class="container">
+          <h1>Coding classes</h1>
+          <div id="tab-selectors" class="row justify-content-center">
+            <div id="feedback-tab-selector" class="col-md-3 tab-selector smooth-transitions" 
+                 onclick="showTab('feedback')">
+              <h3>Give feedback</h3>
+            </div>  
+            <div id="about-tab-selector" class="col-md-4" onclick="showTab('about')">
+              <h1>About</h1>
+            </div>
+            <div id="register-tab-selector" class="col-md-3 tab-selector smooth-transitions" 
+                 onclick="showTab('register')">
+              <h3>Register</h3>
+            </div>
+          </div>  <!-- end of tab-selectors -->
+          <div class="row justify-content-center">
+            <div id="feedback-tab-container" class="row centered justify-content-center">
+              <% include ../partials/contactForm.ejs %>
+            </div>
+            <div id="about-tab-container" class="row centered justify-content-center">
+              <div class="col-md-7">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin 
+                  ut eleifend erat. Nunc pharetra vitae tortor quis congue. Mauris 
+                  laoreet efficitur nisl a elementum. Praesent accumsan quam finibus 
+                  commodo dapibus. Donec sit amet pellentesque sem, at pulvinar ante. 
+                  Pellentesque nisl nisl, mattis eu blandit eget, consectetur sed eros. 
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+                  per inceptos himenaeos.
+                </p>
+                <p><b>The learning material can be found <a href="https://drive.google.com/file/d/1DprcXJs5r2TYkG-WeFyTmqoyONBanaBz/view?usp=sharing">here</a>.</b></p>
+              </div>
+            </div>
+            <div id="register-tab-container" class="row centered justify-content-center">
+              <p><b>
+                You can register by filling out this 
+                <a href="https://goo.gl/forms/0hmNJtdKg5iFBweO2">form</a>.
+              </b></p>
+            </div> <!-- end of register-tab-container -->
+          </div> <!-- end of row -->
+        </div> <!-- end of container -->
+      </section>
+    </div> <!-- end of body -->
+    <% include ../partials/footer.ejs %>
+  </div>
+</body>
+<footer>
+  <script src="/js/codingClasses.js"></script>
+  <% if(locals.selectedTab && selectedTab != "about") { %>
+  <script>
+      showTab("<%= selectedForm %>");
+    </script>
+  <% } %>
+  <script src="/js/formValidation.js"></script>
+</footer>
+
+</html>

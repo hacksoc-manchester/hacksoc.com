@@ -125,5 +125,14 @@ module.exports = () => {
     }
   };
 
+  this.codingClasses = (req, res, next) => {
+    try {
+      res.render("pages/coding-classes");
+    } catch (err) {
+      console.log(err);
+      return next(err);
+    }
+  };
+
   return this;
 };
