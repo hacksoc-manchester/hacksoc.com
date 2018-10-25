@@ -30,9 +30,11 @@ const MainRouter = (database, passport) => {
   // The list of all events
   router.get('/events', mainController.getEvents);
   // Coding classes page
-  router.get('/coding-classes', authHelpers.verifyReCAPTCHA, authHelpers.attachReCAPTCHAKey, mainController.codingClasses);
+  router.get('/coding-classes', authHelpers.verifyReCAPTCHA, 
+             authHelpers.attachReCAPTCHAKey, mainController.codingClasses);
   // Coding classes feedback form
-  router.post('/coding-classes', authHelpers.verifyReCAPTCHA, authHelpers.attachReCAPTCHAKey, mainController.contactHackSoc);
+  router.post('/coding-classes', authHelpers.verifyReCAPTCHA, 
+              authHelpers.attachReCAPTCHAKey, mainController.contactHackSoc);
 
 
   const cvRouter = require("./CVRouter")(database, passport);
