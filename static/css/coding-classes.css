@@ -1,0 +1,29 @@
+#tab-selectors {
+  margin-bottom: 2vh;
+}
+
+.tab-selector {
+  width: 100%;
+  height: 100%;
+  padding-top: 1vh;
+  color: #c0c0c0;
+  cursor: pointer;
+}
+
+.tab-selector:hover {
+  background: #9b9b9b;
+  color: #dedede
+}
+
+h1 {
+  margin-bottom: 3vh;
+}
+
+h3 {
+  text-align: center;
+}
+
+#feedback-tab-container, #register-tab-container {
+  display: none;
+}
+
